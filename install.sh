@@ -6,6 +6,9 @@ abort() {
 }
 
 copy() {
+	echo "Ensuring Vundle is up to date..."
+	git submodule init
+	git submodule update
 	echo "Installing..."
 	rm -rf ~/.vim
 	cp -r vim ~/.vim
