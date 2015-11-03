@@ -6,14 +6,19 @@ abort() {
 }
 
 copy() {
-	echo "Ensuring Vundle is up to date..."
-	git submodule init
-	git submodule update
 	echo "Installing..."
 	rm -rf ~/.vim
 	cp -r vim ~/.vim
 	rm -rf ~/.vimrc
 	cp -r vimrc ~/.vimrc
+	echo "Cloning vundle..."
+	git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/vundle.vim
+	echo "Initializing Plugins..."
+	#git clone https://github.com/Valloric/YouCompleteMe.git ~/.vim/bundle/YouCompleteMe
+	#cd ~/.vim/bundle/YouCompleteMe
+	#git submodule update --init --recursive
+	#./install.sh --clang-completer
+	vim +PluginInstall +qall
 	echo "Finished."
 	exit
 }
