@@ -39,6 +39,8 @@ highlight Pmenu ctermbg=238 gui=bold
 highlight PmenuSel ctermfg=0 gui=bold
 highlight PmenuSel ctermbg=148 gui=bold
 set number
+set hlsearch
+set incsearch
 set tags+=~/.vim/cpp
 set tabstop=3
 set shiftwidth=3
