@@ -41,6 +41,7 @@ set number
 set tags+=~/.vim/cpp
 set tabstop=3
 set shiftwidth=3
+set backspace=2
 filetype plugin on
 set completeopt+=longest
 set hidden
