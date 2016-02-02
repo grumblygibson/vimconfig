@@ -7,7 +7,8 @@ call vundle#begin()
 " alternatively, pass a path where Vundle should install plugins
 "call vundle#begin('~/some/path/here')
 " let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
+"Plugin 'VundleVim/Vundle.vim'
+Bundle 'gmarik/vundle'
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
 Plugin 'tpope/vim-fugitive'
@@ -40,6 +41,8 @@ highlight Pmenu ctermbg=238 gui=bold
 highlight PmenuSel ctermfg=0 gui=bold
 highlight PmenuSel ctermbg=148 gui=bold
 set number
+set hlsearch
+set incsearch
 set tags+=~/.vim/cpp
 set tabstop=3
 set shiftwidth=3

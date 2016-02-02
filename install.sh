@@ -12,7 +12,7 @@ copy() {
 	rm -rf ~/.vimrc
 	cp -r vimrc ~/.vimrc
 	echo "Cloning vundle..."
-	git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/vundle.vim
+	git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 	echo "Initializing Plugins..."
 	#git clone https://github.com/Valloric/YouCompleteMe.git ~/.vim/bundle/YouCompleteMe
 	#cd ~/.vim/bundle/YouCompleteMe
