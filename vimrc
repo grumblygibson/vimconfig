@@ -12,8 +12,10 @@ Plugin 'VundleVim/Vundle.vim'
 " Keep Plugin commands between vundle#begin/end.
 Plugin 'tpope/vim-fugitive'
 Plugin 'airblade/vim-gitgutter'
-Plugin 'bling/vim-airline'
-"Bundle 'Valloric/YouCompleteMe'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+Plugin 'Valloric/YouCompleteMe'
+Plugin 'zah/nim.vim'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -28,6 +30,7 @@ let g:airline#extensions#branch#empty_message=''
 set nocp
 syntax enable
 au BufNewFile,BufRead *.as set filetype=cpp "adds support for AngelScript files as C++ syntax
+au BufNewFile,BufRead *.nim set filetype=nim
 map <C-m> :w<CR> :silent !ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR> :redraw!<CR>
 autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
 autocmd InsertLeave * if pumvisible() == 0|pclose|endif
